@@ -1,5 +1,7 @@
+import static java.lang.IO.*;
+
 public class Product {
-    static private double tax = 0.23;
+    static private double tax ;
     private double priceNetto;
     private String name;
     private int quantity;
@@ -33,5 +35,17 @@ public class Product {
     }
     public double getPriceBrutto(){
         return priceNetto+tax*priceNetto;
+    }
+    public double getValue(){
+        return getPriceBrutto()*quantity;
+    }
+    public void setTax(double tax){
+        Product.tax = tax;
+    }
+    public String toString(){
+        return name + " " + getPriceBrutto();
+    }
+    public void Display(){
+        println(toString());
     }
 }
