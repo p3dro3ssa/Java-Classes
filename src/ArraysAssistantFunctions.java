@@ -38,6 +38,21 @@ public class ArraysAssistantFunctions {
         ex1.index = (Arrays.binarySearch(tab,ex1.extremum));
         return ex1;
     }
+    public void findPlusMinusZero(int[] tab){
+        int zero=0, plus=0, minus=0;
+        for (int i=0;i<tab.length;i++){
+            if (tab[i]==0){
+                zero++;
+            }
+            if (tab[i]<0){
+                plus++;
+            }
+            if (tab[i]<0){
+                minus++;
+            }
+        }
+        println("Count of zero's: "+zero + ", Count of plus's: "+plus+", Count of minus's: "+minus);
+    }
     public class ExtremumIndex {
         private int extremum;
         private int index;
