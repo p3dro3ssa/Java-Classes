@@ -57,6 +57,11 @@ public class ArraysAssistantFunctions {
         private int extremum;
         private int index;
 
+        public ExtremumIndex() {
+            extremum = 0;
+            index = 0;
+        }
+
         public ExtremumIndex(int extremum, int index) {
             this.extremum = extremum;
             this.index = index;
