@@ -1,4 +1,4 @@
-import java.lang.IO.*;
+import static java.lang.IO.*;
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 //void main() {
@@ -23,5 +23,14 @@ void main(String[] args){
     for(int i=0;i<size;i++){
         tab[i]=sc.nextInt();
     }
-    af.findMin(tab);
+    ex1 = af.findMin(tab);
+    int avg = af.calculateAvg(tab);
+    for(int i=0;i<size;i++){
+        if(tab[i]<avg){
+            println(tab[i]);
+        }
+    }
+    int[] tab2 = new int[size];
+    tab2 = Arrays.copyOf(tab,size);
+    
 }
