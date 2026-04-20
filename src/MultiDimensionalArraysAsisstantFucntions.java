@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import static java.lang.IO.*;
 
-public class git MultiDimensionalArraysAsisstantFucntions {
+public class MultiDimensionalArraysAsisstantFucntions {
     Scanner input = new Scanner(System.in);
     public void fill2DArray(int[][] array, int n, int m){
         for(int i=0; i<n;i++){
