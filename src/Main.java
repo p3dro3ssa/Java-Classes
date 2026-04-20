@@ -32,13 +32,14 @@ import static java.lang.IO.*;
 //    tab2 = Arrays.copyOf(tab,size);
 //
 //}
-void main(){
-    int n;
-    Scanner input = new Scanner(System.in);
-    n = input.nextInt();
-    int[][] array = new int[n][n];
-    int sum=0;
-    for(int i=0;i<n;i++){
-        sum+=array[i][i];
-    }
+void main() {
+    int n, element;
+    Scanner sc = new Scanner(System.in);
+    n = sc.nextInt();
+    int[][] arr = new int[n][n];
+    MultiDimensionalArraysAsisstantFucntions MDAAF = new MultiDimensionalArraysAsisstantFucntions();
+    MDAAF.fill2DArray(arr, n, n);
+    element = MDAAF.findSmallestElement(arr, n);
+    MDAAF.displayElementIndexes(arr, element);
+    print(MDAAF.howManyAreSmallerThanAvarage(arr));
 }
