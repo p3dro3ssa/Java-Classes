@@ -38,8 +38,9 @@ void main() {
     n = sc.nextInt();
     int[][] arr = new int[n][n];
     MultiDimensionalArraysAsisstantFucntions MDAAF = new MultiDimensionalArraysAsisstantFucntions();
-    MDAAF.fill2DArray(arr, n, n);
-    element = MDAAF.findSmallestElement(arr, n);
-    MDAAF.displayElementIndexes(arr, element);
-    print(MDAAF.howManyAreSmallerThanAvarage(arr));
+//    MDAAF.fill2DArray(arr, n, n);
+//    element = MDAAF.findSmallestElement(arr, n);
+//    MDAAF.displayElementIndexes(arr, element);
+//    print(MDAAF.howManyAreSmallerThanAvarage(arr));
+    MDAAF.checkboard(arr);
 }

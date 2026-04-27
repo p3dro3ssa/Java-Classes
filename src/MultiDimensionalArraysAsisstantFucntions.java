@@ -94,4 +94,30 @@ public class MultiDimensionalArraysAsisstantFucntions {
         }
         return count;
     }
+    public void checkboard(int[][] array){
+        int ones=0, zeroes=0;
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                array[i][j] = ((j+i)%2);
+            }
+        }
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                if (array[i][j] == 0) {
+                    zeroes++;
+                }else{
+                    ones++;
+                }
+            }
+        }
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                print(array[i][j]);
+            }
+            print("\n");
+        }
+
+        print("Count of 0: "+zeroes);
+        print("Count of ones: "+ones);
+    }
 }
