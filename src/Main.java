@@ -42,5 +42,9 @@ void main() {
 //    element = MDAAF.findSmallestElement(arr, n);
 //    MDAAF.displayElementIndexes(arr, element);
 //    print(MDAAF.howManyAreSmallerThanAvarage(arr));
-    MDAAF.checkboard(arr);
+//    MDAAF.checkboard(arr);
+    MDAAF.scan2DArray(arr);
+    MDAAF.Display2DArray(arr);
+    MDAAF.matrixTurn90degrees(arr);
+    MDAAF.Display2DArray(arr);
 }

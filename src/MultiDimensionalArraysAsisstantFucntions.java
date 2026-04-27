@@ -4,6 +4,13 @@ import static java.lang.IO.*;
 public class MultiDimensionalArraysAsisstantFucntions {
     Scanner input = new Scanner(System.in);
     Random rand = new Random();
+    public void scan2DArray(int[][] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                arr[i][j] = input.nextInt();
+            }
+        }
+    }
     public int sumOf2DArray(int[][] array){
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
@@ -25,11 +32,12 @@ public class MultiDimensionalArraysAsisstantFucntions {
             }
         }
     }
-    public void Display2DArray(int[][] array, int n, int m){
-        for(int i=0; i<n;i++){
-            for(int j=0;j<m;j++){
+    public void Display2DArray(int[][] array){
+        for(int i=0; i< array.length;i++){
+            for(int j=0;j<array[i].length;j++){
                 print(array[i][j]+" ");
             }
+            println();
         }
     }
     public void sumOfSquareArrayDiagonal(int[][] array, int n) {
@@ -105,19 +113,19 @@ public class MultiDimensionalArraysAsisstantFucntions {
             for (int j = 0; j < array[i].length; j++) {
                 if (array[i][j] == 0) {
                     zeroes++;
-                }else{
+                } else {
                     ones++;
                 }
             }
         }
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length; j++) {
-                print(array[i][j]);
-            }
-            print("\n");
-        }
-
         println("Count of 0: "+zeroes);
         println("Count of ones: "+ones);
+    }
+    public void matrixTurn90degrees(int[][] array){
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                array[i][j] = array[array.length-j-1][i];
+            }
+        }
     }
 }
