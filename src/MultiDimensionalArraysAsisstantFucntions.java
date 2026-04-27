@@ -117,7 +117,7 @@ public class MultiDimensionalArraysAsisstantFucntions {
             print("\n");
         }
 
-        print("Count of 0: "+zeroes);
-        print("Count of ones: "+ones);
+        println("Count of 0: "+zeroes);
+        println("Count of ones: "+ones);
     }
 }
