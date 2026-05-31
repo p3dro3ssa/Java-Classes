@@ -52,10 +52,34 @@ import static java.lang.IO.*;
 //RecurrenctionMethods RM = new RecurrenctionMethods();
 // println(RM.power(2,-4));
 //}
+//void main() {
+//    RecurrenctionMethods RM = new RecurrenctionMethods();
+//    Scanner sc = new Scanner(System.in);
+//    int n = sc.nextInt();
+//    int k = sc.nextInt();
+//    //println(RM.factorial(x));
+//    println(RM.digit(n,k));
+//}
 void main() {
-    RecurrenctionMethods RM = new RecurrenctionMethods();
-    Scanner sc = new Scanner(System.in);
-    int x = sc.nextInt();
-    //println(RM.factorial(x));
-    println(RM.digitsSum(x));
+    // Tworzymy obiekty klasy Product przy użyciu konstruktora parametrycznego.
+    // Ważne: Ceny podajemy jako String w konstruktorze BigDecimal ("2499.99"),
+    // aby zachować idealną precyzję ułamków.
+    ProductEnum p1 = new ProductEnum("Laptop", new BigDecimal("2499.99"), 5, Category.ELECTRONICS);
+    ProductEnum p2 = new ProductEnum("Shirt", new BigDecimal("39.99"), 18, Category.CLOTHING);
+    ProductEnum p3 = new ProductEnum("Book", new BigDecimal("19.99"), 12, Category.BOOKS);
+
+    // Wrzucamy produkty do tablicy, żeby wygodnie przejść przez nie pętlą
+    ProductEnum[] products = {p1, p2, p3};
+
+    System.out.println("=== LISTA PRODUKTÓW I ICH WARTOŚĆ CRRAZWITA ===");
+
+    // Pętla for-each przechodząca przez każdy produkt w tablicy
+    for (ProductEnum product : products) {
+        // Niejawnie wywoła się tutaj nadpisana metoda toString() z klasy Product
+        System.out.println(product);
+
+        // Wywołujemy naszą dedykowaną metodę do obliczenia wartości łącznej
+        System.out.println("-> Łączna cena za ten zapas: " + product.calculateTotalPrice() + " zł");
+        System.out.println("--------------------------------------------------");
+    }
 }
